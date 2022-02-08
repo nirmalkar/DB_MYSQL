@@ -12,3 +12,7 @@
 | 2.  | CONCAT_WS       | concatenates string, first argument is applied between every two strings | CONCAT_WS("-", str1, str1) | "Hello-world"   |
 | 3.  | SUBSTRING       | returns trimmed string                                                   | SUBSTRING(title, 0, 5)     | This            |
 | 4.  | REPLACE         | returns trimmed string                                                   | REPLACE(title, " ", "-")   | This-is-title!! |
+| 5.  | REVERSE         | returns reversed string                                                  | REVERSE(str1)              | "olleH"         |
+| 6.  | CHAR_LENGTH     | returns length of string                                                 | REVERSE(str1)              | 5               |
+| 7.  | UPPER           | returns upper-case of string                                             | UPPER(str1)                | "HELLO"         |
+| 8.  | LOWER           | returns lower-case of string                                             | LOWER(str1)                | "hello"         |

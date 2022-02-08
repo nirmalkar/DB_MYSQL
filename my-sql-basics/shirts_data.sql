@@ -1,5 +1,7 @@
-INSERT INTO shirts(article, color, shirt_size, last_worn)
-  VALUES('t-shirt', 'white', 'S', 10),
+INSERT INTO
+  shirts(article, color, shirt_size, last_worn)
+VALUES
+  ('t-shirt', 'white', 'S', 10),
   ('t-shirt', 'green', 'S', 200),
   ('polo shirt', 'black', 'M', 10),
   ('tank top', 'blue', 'S', 50),
