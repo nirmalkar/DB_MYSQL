@@ -16,3 +16,21 @@
 | 6.  | CHAR_LENGTH     | returns length of string                                                 | REVERSE(str1)              | 5               |
 | 7.  | UPPER           | returns upper-case of string                                             | UPPER(str1)                | "HELLO"         |
 | 8.  | LOWER           | returns lower-case of string                                             | LOWER(str1)                | "hello"         |
+
+## Refining
+
+1. DISTINCT
+   Used for selecting all the distinct entries.
+
+```
+SELECT DISTINCT(author_lname) from books;
+
+```
+
+2. ORDER BY
+   As it's name suggests, used for ordering entries in ascending or descending order.
+
+```
+SELECT author_lname FROM books ORDER BY author_lname;
+
+```
