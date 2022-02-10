@@ -34,3 +34,19 @@ SELECT DISTINCT(author_lname) from books;
 SELECT author_lname FROM books ORDER BY author_lname;
 
 ```
+
+2. LIMIT
+   It is used to limit the table content.
+
+```
+select
+  author_fname,
+  author_lname
+from
+  books
+order by
+  author_fname
+limit
+  6;
+
+```
