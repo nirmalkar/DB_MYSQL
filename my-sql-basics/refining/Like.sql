@@ -25,3 +25,12 @@ from
   books
 where
   author_fname like "%da%";
+
+--data for all the slected items will be there in which title anywhere have "%" within string. for this special condition we used escape character.
+select
+  title,
+  author_fname
+from
+  books
+where
+  title like "%\%%";
