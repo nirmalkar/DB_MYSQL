@@ -35,7 +35,7 @@ SELECT author_lname FROM books ORDER BY author_lname;
 
 ```
 
-2. LIMIT
+3. LIMIT
    It is used to limit the table content.
 
 ```
@@ -48,5 +48,14 @@ order by
   author_fname
 limit
   6;
+
+```
+
+4. LIKE
+   LIKE is used to file out data on the basis of character present inside them. I searches using pattern in a column.
+   Characters : % and \_
+
+```
+SELECT title, author_fname FROM books WHERE LIKE "da%"
 
 ```
