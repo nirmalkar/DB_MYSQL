@@ -59,3 +59,73 @@ limit
 SELECT title, author_fname FROM books WHERE LIKE "da%"
 
 ```
+
+## Aggregation
+
+1. MAX
+   MAX() returns maximum value of column
+
+```
+select
+  MAX(pages)
+from
+  books;
+
+```
+
+2. MIN
+   MIN() returns minimum value of column
+
+```
+SELECT
+  MIN(pages)
+FROM
+  books;
+
+```
+
+3. SUM
+   SUM() adding all the page nos in the table
+
+```
+SELECT
+  SUM(pages)
+FROM
+  books;
+
+```
+
+4. GROUP BY
+   Group BY groups up single type of data in to one group
+
+    ```
+    SELECT
+    released_year,
+    COUNT(*) as book_count
+    FROM
+    books
+    GROUP BY
+    released_year;
+    ```
+
+5. AVERAGE
+   Average(AVG) function is used to calculate the average of a column.
+
+```
+    SELECT
+    AVG(pages)
+    FROM
+    books;
+
+```
+
+4.  COUNT
+    COUNT shows count of all rows in the table
+
+```
+SELECT
+COUNT(*)
+FROM
+books;
+
+```
