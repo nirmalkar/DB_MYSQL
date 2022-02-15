@@ -17,3 +17,18 @@ VALUES
     "1994-12-11 12:32:32"
   ),
   ("newBorn", CURDATE(), CURTIME(), NOW());
+
+-- DATE_ADD and DATEDIFF functions are used to add or subtract days, months, years from a date.
+SELECT
+  name,
+  birth_dt,
+  DATE_ADD(birth_dt, INTERVAL 1 MONTH)
+FROM
+  people;
+
+SELECT
+  name,
+  birth_date,
+  DATEDIFF(now(), birth_dt)
+FROM
+  people;

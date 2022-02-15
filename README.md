@@ -142,6 +142,13 @@ DATE, TIME, and DATETIME data types are used to store date and time in data base
 CURDATE() function returns current date.
 CURTIME() function returns current time.
 NOW() function returns current date and time.
+DAY() function returns date of the month.
+DAYNAME() function returns day of the month.
+DAYOFMONTH() function returns day of the month.
+DAYOFYEAR() function returns number of day of the year. (1st day to 365th day).
+MONTHNAME() function returns month name.
+
+[date-time](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html)
 
 ```
 INSERT INTO
@@ -165,4 +172,28 @@ VALUES
     CURTIME(),
     NOW()
   );
+```
+
+### FORMATTING DATE AND TIME
+
+birthdt = 1994-07-06 01:32:12
+
+```
+SELECT DATE_FORMAT(birthdt, 'Was born on a %W') FROM people;
+SELECT DATE_FORMAT(birthdt, '%m/%d/%Y') FROM people;
+SELECT DATE_FORMAT(birthdt, '%m/%d/%Y at %h:%i') FROM people;
+```
+
+### Date calculations
+
+DATEDIFF
+
+```
+SELECT name, birth_date, DATEDIFF(now(), birth_dt) FROM people;
+```
+
+DATE_ADD
+
+```
+SELECT name, birth_dt, DATE_ADD(birth_dt, INTERVAL 1 MONTH) FROM people;
 ```
