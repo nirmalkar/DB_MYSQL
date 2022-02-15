@@ -1,0 +1,7 @@
+-- Float(Floating point)
+-- syntax : float(p) where p is the precision.
+-- precision is the number of digits in the number.
+-- Float vs Double 
+-- A FLOAT is for single - precision, while a DOUBLE is for double - precision numbers. MySQL uses four bytes for single - precision
+-- values and eight bytes for double - precision values.There is a big difference from floating point numbers and decimal (numeric) numbers, 
+-- which you can use with the DECIMAL data type.

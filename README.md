@@ -119,7 +119,7 @@ FROM
 
 ```
 
-4.  COUNT
+6.  COUNT
     COUNT shows count of all rows in the table
 
 ```
@@ -128,4 +128,41 @@ COUNT(*)
 FROM
 books;
 
+```
+
+## DATA TYPES
+
+FLOAT
+DOUBLE
+
+## DATE & TIME
+
+DATE, TIME, and DATETIME data types are used to store date and time in data base.
+
+CURDATE() function returns current date.
+CURTIME() function returns current time.
+NOW() function returns current date and time.
+
+```
+INSERT INTO
+  people(name, birth_date, birth_time, birth_dt)
+VALUES
+  (
+    "Hemant",
+    "1994-07-06",
+    "01:32:12",
+    "1994-07-06 01:32:12"
+  ),
+  (
+    "Ravi",
+    "1994-12-11",
+    "12:32:32",
+    "1994-12-11 12:32:32"
+  ),
+  (
+    "newBorn",
+    CURDATE(),
+    CURTIME(),
+    NOW()
+  );
 ```
