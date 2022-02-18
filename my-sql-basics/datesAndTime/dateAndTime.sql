@@ -32,3 +32,16 @@ SELECT
   DATEDIFF(now(), birth_dt)
 FROM
   people;
+
+-- TIMESTAMP 
+CREATE TABLE blogs(
+  content VARCHAR(100),
+  changed_at TIMESTAMP DEFAULT NOW()
+);
+
+SELECT
+  *
+FROM
+  blogs
+ORDEr BY
+  changed_at DESC;

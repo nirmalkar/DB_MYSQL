@@ -148,7 +148,7 @@ DAYOFMONTH() function returns day of the month.
 DAYOFYEAR() function returns number of day of the year. (1st day to 365th day).
 MONTHNAME() function returns month name.
 
-[date-time](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html)
+SQL document for date and time: [doc](https://dev.mysql.com/doc/refman/8.0/en/date-and-time-functions.html)
 
 ```
 INSERT INTO
@@ -196,4 +196,10 @@ DATE_ADD
 
 ```
 SELECT name, birth_dt, DATE_ADD(birth_dt, INTERVAL 1 MONTH) FROM people;
+```
+
+TIMESTAMP
+
+```
+CREATE TABLE blogs(content VARCHAR(100), changed_at TIMESTAMP DEFAULT NOW());
 ```
