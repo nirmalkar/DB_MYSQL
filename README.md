@@ -52,7 +52,7 @@ limit
 ```
 
 4. LIKE
-   LIKE is used to file out data on the basis of character present inside them. I searches using pattern in a column.
+   LIKE is used to file out data on the basis of character present inside them. It searches using pattern in a column.
    Characters : % and \_
 
 ```
