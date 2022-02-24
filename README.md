@@ -203,3 +203,42 @@ TIMESTAMP
 ```
 CREATE TABLE blogs(content VARCHAR(100), changed_at TIMESTAMP DEFAULT NOW());
 ```
+
+## JOINING TABLES
+
+### suppose we have two tables, customers and orders.
+
+Customers table:
+
+| id  | first_name | last_name | email            |
+| --- | ---------- | --------- | ---------------- |
+| 1   | Boy        | George    | george@gmail.com |
+| 2   | George     | Michael   | gm@gmail.com     |
+| 3   | David      | Bowie     | david@gmail.com  |
+| 4   | Blue       | Steele    | blue@gmail.com   |
+| 5   | Bette      | Davis     | bette@aol.com    |
+
+Orders table:
+
+| id  | order_date | amount | customer_id |
+| --- | ---------- | ------ | ----------- |
+| 1   | 2016-02-10 | 99.99  | 1           |
+| 2   | 2017-11-11 | 35.50  | 1           |
+| 3   | 2014-12-12 | 800.67 | 2           |
+| 4   | 2015-01-03 | 12.50  | 2           |
+| 5   | 1999-04-11 | 450.25 | 5           |
+
+### and we would want to join these two
+
+ONE WAY TO JOIN THE TABLES
+
+```
+SELECT * FROM customers, orders WHERE customers.id = orders.customer_id;
+
+```
+
+ANOTHER WAY TO JOIN THE TABLES WITH INNER JOIN
+
+```
+SELECT * FROM customers JOIN orders where customers.id = orders.customer_id;
+```
