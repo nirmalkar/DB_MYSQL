@@ -1,15 +1,15 @@
 -- Average(AVG) function is used to calculate the average of a column.
 -- average of pages in the table.
-select
+SELECT
   avg(pages)
-from
+FROM
   books;
 
 -- average of stock_quantity group by released_year.
-select
+SELECT
   released_year,
   avg(stock_quantity)
-from
+FROM
   books
-group by
+GROUP BY
   released_year;

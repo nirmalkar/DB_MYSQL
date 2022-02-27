@@ -1,4 +1,4 @@
-select
-  reverse(title)
-from
+SELECT
+  REVERSE(title)
+FROM
   books;

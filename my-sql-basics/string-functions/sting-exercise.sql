@@ -1,21 +1,21 @@
-select
-  replace(title, " ", "->")
-from
+SELECT
+  REPLACE(title, " ", "->")
+FROM
   books;
 
-select
+SELECT
   author_fname as Forwards,
-  reverse(author_lname) as Backwards
-from
+  REVERSE(author_lname) as Backwards
+FROM
   books;
 
-select
-  upper(concat(author_fname, " ", author_lname)) as full_name_in_caps
-from
+SELECT
+  UPPER(CONCAT(author_fname, " ", author_lname)) as full_name_in_caps
+FROM
   books;
 
-select
+SELECT
   title,
   char_length(title) as length
-from
+FROM
   books;

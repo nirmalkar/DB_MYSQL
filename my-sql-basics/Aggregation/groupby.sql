@@ -1,31 +1,31 @@
 -- Books count groped by year_released
-select
+SELECT
   released_year,
   count(*) as book_count
-from
+FROM
   books
-group by
+GROUP BY
   released_year;
 
 -- showing release year in descending order and grouped by release_year and count of books
-select
+SELECT
   released_year,
   count(*) as book_count
-from
+FROM
   books
-group by
+GROUP BY
   released_year
-order by
+ORDER BY
   released_year desc;
 
 -- 
-select
+SELECT
   author_fname,
   author_lname,
   max(pages)
-from
+FROM
   books
-group by
+GROUP BY
   author_fname,
   author_lname;
 

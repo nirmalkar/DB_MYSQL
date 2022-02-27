@@ -1,4 +1,4 @@
-select
+SELECT
   replace(title, "l", "7")
-from
+FROM
   books;

@@ -5,7 +5,7 @@ FROM
   books;
 
 -- show count of all the distinct authors in the books table.
-select
+SELECT
   count(distinct author_fname)
-from
+FROM
   books;

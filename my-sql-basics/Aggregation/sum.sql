@@ -1,16 +1,16 @@
 -- adding all the page nos in the table
-select
-  sum(pages)
-from
+SELECT
+  SUM(pages)
+FROM
   books;
 
 -- grouping author_fname and author_lname and adding all the pages written by author
-select
+SELECT
   author_fname,
   author_lname,
-  sum(pages) as work_done
-from
+  SUM(pages) AS work_done
+FROM
   books
-group by
+GROUP BY
   author_fname,
   author_lname;

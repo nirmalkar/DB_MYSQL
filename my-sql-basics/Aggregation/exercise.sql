@@ -1,55 +1,55 @@
 -- Print total number of books in the table
-select
+SELECT
   count(*) as total_number_of_books
-from
+FROM
   books;
 
 -- how many books release each year
-select
+SELECT
   released_year,
   count(*) as "book(s)_released"
-from
+FROM
   books
-group by
+GROUP BY
   released_year;
 
 -- print out total number of books in the stock
-select
+SELECT
   sum(stock_quantity)
-from
+FROM
   books;
 
 -- find the avg released year for earch author
-select
+SELECT
   concat(author_fname, " ", author_lname),
   avg(released_year)
-from
+FROM
   books
-group by
+GROUP BY
   author_fname,
   author_lname;
 
 -- find the full name of author who wrote the longest book
-select
+SELECT
   concat(author_fname, " ", author_lname) as full_name,
   pages
-from
+FROM
   books
-where
+WHERE
   pages =(
-    select
+    SELECT
       max(pages)
-    from
+    FROM
       books
   );
 
 -- OR(optimized)
-select
+SELECT
   concat(author_fname, " ", author_lname) as full_name,
   pages
-from
+FROM
   books
-order by
-  pages desc
-limit
+ORDER BY
+  pages DESC
+LIMIT
   1;

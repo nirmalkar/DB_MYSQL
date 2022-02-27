@@ -1,9 +1,9 @@
-select
+SELECT
   upper(title)
-from
+FROM
   books;
 
-select
+SELECT
   lower(title)
-from
+FROM
   books;

@@ -1,18 +1,18 @@
 -- min() returns minimum value of column
 -- oldest book released in our table
-select
+SELECT
   min(released_year)
-from
+FROM
   books;
 
-select
+SELECT
   *
-from
+FROM
   books
-where
+WHERE
   pages =(
-    select
+    SELECT
       min(pages)
-    from
+    FROM
       books
   );

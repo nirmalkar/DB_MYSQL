@@ -1,18 +1,18 @@
 -- max() returns maximum value of column
 -- book with the maximum number of pages
-select
+SELECT
   max(pages)
-from
+FROM
   books;
 
-select
+SELECT
   *
-from
+FROM
   books
-where
+WHERE
   pages =(
-    select
+    SELECT
       max(pages)
-    from
+    FROM
       books
   );
