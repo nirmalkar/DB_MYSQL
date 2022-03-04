@@ -228,7 +228,7 @@ Orders table:
 | 4   | 2015-01-03 | 12.50  | 2           |
 | 5   | 1999-04-11 | 450.25 | 5           |
 
-### and we would want to join these two
+### And we would want to join these two
 
 ONE WAY TO JOIN THE TABLES
 
@@ -237,8 +237,28 @@ SELECT * FROM customers, orders WHERE customers.id = orders.customer_id;
 
 ```
 
-ANOTHER WAY TO JOIN THE TABLES WITH INNER JOIN
+### INNER JOIN
+
+ANOTHER WAY TO JOIN THE TABLES WITH INNER JOIN OR SIMPLY CALLED JOIN.
 
 ```
 SELECT * FROM customers JOIN orders where customers.id = orders.customer_id;
+```
+
+### LEFT JOIN
+
+The LEFT JOIN returns all rows from the left table and the matching rows from the right table.
+
+```
+SElECT * FROM customers LEFT JOIN orders ON customers.id = orders.customer_id;
+
+```
+
+### RIGHT JOIN
+
+The RIGHT JOIN returns all rows from the right table and the matching rows from the left table.
+
+```
+SELECT * FROM customers RIGHT JOIN orders ON customers.id = orders.customer_id;
+
 ```
